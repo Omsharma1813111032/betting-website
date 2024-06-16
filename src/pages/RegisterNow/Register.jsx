@@ -40,10 +40,11 @@ const Register = () => {
                         <small>By checking the box you are to our Terms and Condition.</small>
                     </small>
 
-
-                    <button className="btn registerBtn">
-                        Next
-                    </button>
+                    <NavLink to="/profile">
+                        <button className="btn registerBtn">
+                            Next
+                        </button>
+                    </NavLink>
 
                 </form>
 
@@ -53,7 +54,7 @@ const Register = () => {
 
 
             <div className="otpFooter">
-                <p>Already a memeber?  
+                <p>Already a memeber?
                     <NavLink to="/signin" >
                         <span className="registerNowSpan"> Login In</span>
                     </NavLink>
