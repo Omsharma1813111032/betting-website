@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color:#F0E3C8;
+  font-family: 'Poppins', sans-serif;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}

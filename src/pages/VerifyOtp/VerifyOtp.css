@@ -1,0 +1,83 @@
+.otpImage img {
+    width: 100vw;
+}
+
+
+.otpHeading {
+    text-align: center;
+}
+
+.otpHead {
+    font-weight: 700;
+    font-size: 4vh;
+}
+
+.otpSubHead {
+    margin-top: 3%;
+}
+
+.otpBox {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    width: 10vw;
+    height: 5vh;
+    margin: 0 2%;
+}
+
+.otpBoxes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.otpBoxes input {
+    border: none;
+    margin-top: 10%;
+}
+
+.otpBtn {
+    margin-top: 10%;
+}
+
+.otpBtn button {
+    background: #0C8D30;
+    border: none;
+    width: 80vw;
+    height: 8vh;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.requestOtp {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.requestOtpSubHead {
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+}
+
+.requestOtpHead {
+    letter-spacing: 1px;
+}
+
+.otpFooter {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 80vw;
+    margin: 5% 18vw;
+}
+
+.otpFooter .registerNowSpan{
+    color: #6C63FF;
+}

@@ -1,0 +1,45 @@
+.loadingScrMainDiv{
+    background-color:#F0E3C8;
+    height: 100dvh;
+}
+
+.loadingScreenImg {
+    width: 100vw;
+    height: 50vh; 
+}
+
+.loadingScreenImg img {
+    width: 100vw;
+    height: 50vh; 
+    object-fit: cover;
+}
+
+.loadingScreenHeading {
+    text-align: center;
+    margin: 3%;
+}
+
+.subHeadLoadScr{
+    margin-top: 5%;
+}
+
+.mainHeadLoad {
+    font-weight: 700;
+    font-size: 3vh;
+}
+
+.subHeadLoadScr {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.loadingScrBtn .btn {
+
+    background: #F0E3C8;
+    border: none;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+}
+
+

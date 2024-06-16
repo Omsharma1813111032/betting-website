@@ -1,0 +1,13 @@
+.loaderMainDiv{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(102.05% 47.15% at 50% 52.85%, #C4BC94 0%, #0C8D30 100%);
+}
+
+.loaderLogo{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

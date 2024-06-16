@@ -1,0 +1,70 @@
+.registerImageDiv img {
+    width: 100vw;
+}
+
+.registerHeads {
+    text-align: center;
+}
+
+.registerHeading {
+    font-weight: 700;
+    font-size: 4vh;
+}
+
+.registerSubHead {
+    margin-top: 1%;
+}
+
+.registerForm{
+    text-align: center;
+    margin-top: 2%;
+}
+.registerForm input{
+    border: none;
+    width: 80vw;
+    padding: 2%;
+    margin: 2% 0;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.registerCheck{
+    width: 20px !important;
+}
+
+.smallText{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.registerBtn{
+    background: #0C8D30;
+    border: none;
+    width: 80vw;
+    height: 8vh;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+
+.registerFooter {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 80vw;
+    margin: 5% 18vw;
+}
+
+.registerFooter .registerNowSpan{
+    color: #6C63FF;
+}
