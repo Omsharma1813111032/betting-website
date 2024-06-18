@@ -23,7 +23,7 @@ const Register = () => {
         e.preventDefault()
         const { name, phone, cPhone, email } = data
 
-        if (!name || !phone || !cPhone) {
+        if (!name || !phone || !cPhone || !email ) {
             toast.error("All fields are required!!")
             return;
         }
@@ -94,7 +94,7 @@ const Register = () => {
                     <input type="text" placeholder="Full Name" onChange={(e) => { setData({ ...data, name: e.target.value }) }} />
                     <input type="number" placeholder="Phone Number" onChange={(e) => { setData({ ...data, phone: e.target.value }) }} />
                     <input type="number" placeholder="Confirm Phone Number" onChange={(e) => { setData({ ...data, cPhone: e.target.value }) }} />
-                    <input type="email" placeholder="E-mail (optional)" onChange={(e) => { setData({ ...data, email: e.target.value }) }} />
+                    <input type="email" placeholder="E-mail" onChange={(e) => { setData({ ...data, email: e.target.value }) }} />
                     <input type="text" placeholder="Referral Code (Optional)" onChange={(e) => { setData({ ...data, referral: e.target.value }) }} />
 
                     <br />
