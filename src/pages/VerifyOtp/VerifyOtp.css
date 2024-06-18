@@ -34,6 +34,16 @@
 .otpBoxes input {
     border: none;
     margin-top: 10%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+.otpBoxes form {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .otpBtn {
@@ -78,6 +88,6 @@
     margin: 5% 18vw;
 }
 
-.otpFooter .registerNowSpan{
+.otpFooter .registerNowSpan {
     color: #6C63FF;
 }

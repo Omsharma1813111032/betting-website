@@ -6,6 +6,8 @@ import Signin from "./pages/Signin/Signin";
 import VerifyOtp from "./pages/VerifyOtp/VerifyOtp";
 import Register from "./pages/RegisterNow/Register";
 import Profile from "./pages/Profile/Profile";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -28,13 +30,16 @@ function App() {
 
       {
         loading ? <PreLoader /> :
-          <Routes>
-            <Route path="/" element={<LoadingScreen />} />
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/verify" element={<VerifyOtp />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/profile" element={<Profile />} />
-          </Routes>
+          <>
+            <Routes>
+              <Route path="/" element={<LoadingScreen />} />
+              <Route path="/signin" element={<Signin />} />
+              <Route path="/verify" element={<VerifyOtp />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+            <ToastContainer autoClose={1500} />
+          </>
       }
 
 

@@ -4,11 +4,33 @@ import HR from "../../assets/signInHr.svg"
 import Facebook from "../../assets/Facebook.svg"
 import Apple from "../../assets/apple.svg"
 import YT from "../../assets/Google.svg"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import SendOtp from "../../assets/SendOtpButton.svg"
+import { useState } from "react"
+import { toast } from "react-toastify"
 
 
 const Signin = () => {
+
+    const [phone,setPhone] = useState(0)
+    const navigate = useNavigate()
+
+    const handleSendOtp = () =>{
+
+        if(!phone){
+            toast.error("Phone no. Required")
+            return
+        }
+
+        toast.success("Please enter OTP")
+        localStorage.setItem("phone",phone)
+        navigate("/verify")
+
+
+
+    }
+
+
     return (
         <div className="signInMainDiv">
 
@@ -30,7 +52,7 @@ const Signin = () => {
 
 
             <div className="signInNumber">
-                <input type="number" name="mobile" placeholder="Enter your Number" />
+                <input type="number" name="mobile" placeholder="Enter your Number" onChange={(e)=>{setPhone(e.target.value)}} />
             </div>
 
 
@@ -57,16 +79,16 @@ const Signin = () => {
 
 
 
-            <div className="sendOtpBtn">
+            <div className="sendOtpBtn" onClick={handleSendOtp} >
 
 
-                <NavLink to="/verify">
+                {/* <NavLink to="/verify"> */}
 
                     <button className="btn">
                         <img src={SendOtp} />
                     </button>
 
-                </NavLink>
+                {/* </NavLink> */}
 
 
 

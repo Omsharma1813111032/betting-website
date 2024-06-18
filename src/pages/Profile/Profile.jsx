@@ -25,12 +25,13 @@ const Profile = () => {
             </div>
 
 
+
             <div className="profileUserDetails">
-                <div className="profileUserInfo">
-                    <input type="text" />  <button className="btn">Save</button>
+                <div className="profileUserName">
+                    <input type="text" placeholder={localStorage.getItem("name")} />  <button className="btn">Save</button>
                 </div>
-                <div className="profileUserInfo">
-                    <input type="text" />  <button className="btn">Save</button>
+                <div className="profileUserPhone">
+                    <input type="text" placeholder={localStorage.getItem("phone")} />  <button className="btn">Save</button>
                 </div>
             </div>
 
