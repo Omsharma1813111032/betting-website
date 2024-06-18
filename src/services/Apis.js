@@ -6,3 +6,9 @@ import { baseUrl } from "./helper";
 export const registerUser = async(data) =>{
     return await commonFunction("POST",`${baseUrl}/api/user/register`,data)
 }
+
+
+// register a new user
+export const loginUser = async(data) =>{
+    return await commonFunction("POST",`${baseUrl}/api/user/send-otp`,data)
+}

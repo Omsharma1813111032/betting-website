@@ -29,32 +29,32 @@ const Register = () => {
         }
 
 
-        if(phone.length<10 || cPhone<10){
+        if (phone.length < 10 || cPhone < 10) {
             toast.error("Valid phone no required")
             return
         }
 
+        if (phone !== cPhone) {
+            toast.error("Phone no. Not Matched...")
+            return
+        }
 
         try {
 
 
-            if (phone !== cPhone) {
-                toast.error("Phone no. Not Matched...")
-                return
-            }
 
             const resp = await registerUser({
-                name,mobile:phone,confirmMobile:cPhone,email
+                name, mobile: phone, confirmMobile: cPhone, email
             })
             if (resp.status === 201) {
-                localStorage.setItem("user_id",resp.data.userId)
+                localStorage.setItem("user_id", resp.data.userId)
                 localStorage.setItem("name", name)
                 localStorage.setItem("phone", phone)
                 localStorage.setItem("email", email)
                 localStorage.setItem("referral", referral)
                 navigate("/verify")
                 toast.success("Please Enter Your OTP")
-            }else{
+            } else {
                 toast.error("Something Went Wrong!!")
             }
 

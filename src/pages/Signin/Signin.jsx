@@ -8,23 +8,41 @@ import { NavLink, useNavigate } from "react-router-dom"
 import SendOtp from "../../assets/SendOtpButton.svg"
 import { useState } from "react"
 import { toast } from "react-toastify"
+import { loginUser } from "../../services/Apis"
 
 
 const Signin = () => {
 
-    const [phone,setPhone] = useState(0)
+    const [phone, setPhone] = useState(0)
     const navigate = useNavigate()
 
-    const handleSendOtp = () =>{
+    const handleSendOtp = async () => {
 
-        if(!phone){
+        if (!phone) {
             toast.error("Phone no. Required")
             return
         }
 
-        toast.success("Please enter OTP")
-        localStorage.setItem("phone",phone)
-        navigate("/verify")
+
+        try {
+            ``
+            const resp = await loginUser({mobile:phone})
+
+            if (resp.status === 200) {
+
+                toast.success("Please enter OTP")
+                localStorage.setItem("phone", phone)
+                navigate("/verify")
+
+            }else{
+                toast.error(resp.response.data.message)
+            }
+
+
+        } catch (err) {
+            toast.error("Something Went Wrong!!")
+        }
+
 
 
 
@@ -52,7 +70,7 @@ const Signin = () => {
 
 
             <div className="signInNumber">
-                <input type="number" name="mobile" placeholder="Enter your Number" onChange={(e)=>{setPhone(e.target.value)}} />
+                <input type="number" name="mobile" placeholder="Enter your Number" onChange={(e) => { setPhone(e.target.value) }} />
             </div>
 
 
@@ -84,9 +102,9 @@ const Signin = () => {
 
                 {/* <NavLink to="/verify"> */}
 
-                    <button className="btn">
-                        <img src={SendOtp} />
-                    </button>
+                <button className="btn">
+                    <img src={SendOtp} />
+                </button>
 
                 {/* </NavLink> */}
 
