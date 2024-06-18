@@ -21,7 +21,7 @@ const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const { name, phone, cPhone, email, referral } = data
+        const { name, phone, cPhone, email } = data
 
         if (!name || !phone || !cPhone) {
             toast.error("All fields are required!!")
@@ -46,16 +46,16 @@ const Register = () => {
             const resp = await registerUser({
                 name, mobile: phone, confirmMobile: cPhone, email
             })
+
             if (resp.status === 201) {
                 localStorage.setItem("user_id", resp.data.userId)
                 localStorage.setItem("name", name)
                 localStorage.setItem("phone", phone)
                 localStorage.setItem("email", email)
-                localStorage.setItem("referral", referral)
                 navigate("/verify")
                 toast.success("Please Enter Your OTP")
-            } else {
-                toast.error("Something Went Wrong!!")
+            } else if(resp.status===400) {
+                toast.error("User Already Exists !!")
             }
 
 

@@ -8,7 +8,7 @@ export const commonFunction = async(methods, url, body, header) =>{
         method:methods,
         url,
         data:body,
-        headers:header ? header : {"Content-Type":"Application/Json"}
+        headers:header ? header : {"Content-Type":"application/json"}
     }
 
     return await axios(config).then((res)=>{return res}).catch((err)=>{return err})
