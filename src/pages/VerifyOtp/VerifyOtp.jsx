@@ -93,7 +93,7 @@ const VerifyOtp = () => {
             <div className="registerFooter">
                 <p>New Member?
                     <NavLink to="/register">
-                        <span className="registerNowSpan">Register Now</span>
+                        <span className="registerNowSpan"> Register Now</span>
                     </NavLink>
                 </p>
             </div>

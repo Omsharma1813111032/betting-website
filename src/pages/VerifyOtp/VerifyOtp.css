@@ -1,5 +1,6 @@
 .otpImage img {
     width: 100vw;
+    height: 30vh;
 }
 
 
@@ -20,20 +21,20 @@
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     border-radius: 7px;
-    width: 10vw;
-    height: 5vh;
-    margin: 0 2%;
+    width: 11vw;
+    height: 6vh;
+    margin: 0 1%;
 }
 
 .otpBoxes {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: 5vh 0;
 }
 
 .otpBoxes input {
     border: none;
-    margin-top: 10%;
     text-align: center;
     font-weight: 700;
     font-size: 100%;
@@ -54,10 +55,10 @@
     background: #0C8D30;
     border: none;
     width: 80vw;
-    height: 8vh;
+    height: 6vh;
     border-radius: 10px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 3vh;
     display: flex;
     margin: auto;
     text-align: center;
@@ -74,10 +75,13 @@
 .requestOtpSubHead {
     letter-spacing: 1px;
     text-decoration-line: underline;
+    font-size: 1.6vh;
+    margin-top: 1vh;
 }
 
 .requestOtpHead {
     letter-spacing: 1px;
+    font-size: 1.8vh;
 }
 
 .otpFooter {

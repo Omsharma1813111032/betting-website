@@ -5,7 +5,7 @@ import Facebook from "../../assets/Facebook.svg"
 import Apple from "../../assets/apple.svg"
 import YT from "../../assets/Google.svg"
 import { NavLink, useNavigate } from "react-router-dom"
-import SendOtp from "../../assets/SendOtpButton.svg"
+// import SendOtp from "../../assets/SendOtpButton.svg"
 import { useState } from "react"
 import { toast } from "react-toastify"
 import { loginUser } from "../../services/Apis"
@@ -26,7 +26,7 @@ const Signin = () => {
 
         try {
             ``
-            const resp = await loginUser({mobile:phone})
+            const resp = await loginUser({ mobile: phone })
 
             if (resp.status === 200) {
 
@@ -34,7 +34,7 @@ const Signin = () => {
                 localStorage.setItem("phone", phone)
                 navigate("/verify")
 
-            }else{
+            } else {
                 toast.error(resp.response.data.message)
             }
 
@@ -77,17 +77,17 @@ const Signin = () => {
 
             <div className="signInWith ">
 
-                <img src={HR} />
+                <img src={HR} className="signInHr" />
 
                 <div className="socialListSignIn">
                     <div className="socialSignIn">
-                        <img src={Facebook} width={80} />
+                        <img src={Facebook} />
                     </div>
                     <div className="socialSignIn">
-                        <img src={YT} width={80} />
+                        <img src={YT} />
                     </div>
                     <div className="socialSignIn">
-                        <img src={Apple} width={80} />
+                        <img src={Apple} />
                     </div>
                 </div>
 
@@ -97,13 +97,13 @@ const Signin = () => {
 
 
 
-            <div className="sendOtpBtn" onClick={handleSendOtp} >
+            <div className="" >
 
 
                 {/* <NavLink to="/verify"> */}
 
-                <button className="btn">
-                    <img src={SendOtp} />
+                <button className="btn signInButton" onClick={handleSendOtp}>
+                    Next
                 </button>
 
                 {/* </NavLink> */}
