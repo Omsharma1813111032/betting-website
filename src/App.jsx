@@ -8,6 +8,7 @@ import Register from "./pages/RegisterNow/Register";
 import Profile from "./pages/Profile/Profile";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
+import Terms from "./pages/TermsOfServices/Terms";
 
 
 
@@ -37,6 +38,8 @@ function App() {
               <Route path="/verify" element={<VerifyOtp />} />
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/terms" element={<Terms />} />
+              
             </Routes>
             <ToastContainer autoClose={1500} />
           </>

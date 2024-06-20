@@ -1,0 +1,25 @@
+.BackHeaderMainClass{
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2% 2% 0% 2%;
+}
+
+.backHeaderTitle{
+    text-align: center;
+}
+
+.backHeaderBack{
+    width: 15vw;
+}
+
+.backHeaderTitle{
+    width: 60vw;
+}
+
+.backHeaderWallet{
+    width: 15vw;
+}
