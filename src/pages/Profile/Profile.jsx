@@ -2,8 +2,32 @@ import "./Profile.css"
 import Bg from "../../assets/profile.png"
 import Avatar from "../../assets/Avatar.png"
 import Arrow from "../../assets/arrow.png"
+import gamePlayed from "../../assets/gamePlayed.svg"
+import coinIcon from "../../assets/coinIcon.svg"
+import penalty from "../../assets/penalty.svg"
+import referral from "../../assets/referralEarning.svg"
+import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom"
+
+
 
 const Profile = () => {
+
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        localStorage.removeItem("user_id")
+        localStorage.removeItem("email")
+        localStorage.removeItem("referral")
+        localStorage.removeItem("phone")
+        localStorage.removeItem("name")
+        localStorage.removeItem("user_coins")
+        navigate("/signin")
+        toast.success("Logout SuccessFull")
+    }
+
+
+
     return (
         <div className="profileMainDiv">
 
@@ -58,27 +82,57 @@ const Profile = () => {
 
                 <div className="profileMetricList">
                     <div className="metricList">
-                        <div className="metricsLeftCol"></div>
-                        <div className="metricsRightCol"></div>
+                        <div className="metricsLeftCol">
+                            <div className="meritIcon">
+                                <img src={gamePlayed} />
+                            </div>
+                            <div className="meritName">
+                                Games Played
+                            </div>
+                        </div>
+                        <div className="metricsRightCol">
+                            <p>3</p>
+                        </div>
                     </div>
                     <div className="metricList">
-                        <div className="metricsLeftCol"></div>
-                        <div className="metricsRightCol"></div>
+                        <div className="metricsLeftCol">
+                            <div className="meritIcon">
+                                <img src={coinIcon} />
+                            </div>
+                            <div className="meritName">
+                                Coins Won
+                            </div>
+                        </div>
+                        <div className="metricsRightCol"><p>200</p></div>
                     </div>
                     <div className="metricList">
-                        <div className="metricsLeftCol"></div>
-                        <div className="metricsRightCol"></div>
+                        <div className="metricsLeftCol">
+                            <div className="meritIcon">
+                                <img src={penalty} />
+                            </div>
+                            <div className="meritName">
+                                Penalty
+                            </div>
+                        </div>
+                        <div className="metricsRightCol"><p>1</p></div>
                     </div>
                     <div className="metricList">
-                        <div className="metricsLeftCol"></div>
-                        <div className="metricsRightCol"></div>
+                        <div className="metricsLeftCol">
+                            <div className="meritIcon">
+                                <img src={referral} />
+                            </div>
+                            <div className="meritName">
+                                Referral Earning
+                            </div>
+                        </div>
+                        <div className="metricsRightCol"><p>2</p></div>
                     </div>
                 </div>
 
 
 
                 <div className="profileFooter">
-                    <p>Log out</p>
+                    <p onClick={handleLogout}>Log out</p>
                 </div>
 
             </div>

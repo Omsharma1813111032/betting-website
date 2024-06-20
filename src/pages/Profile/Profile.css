@@ -64,9 +64,99 @@
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     padding: 5%;
+    margin: 3%;
 }
 
-.kycHeading .kycMainHead{
+.kycHeading .kycMainHead {
     font-weight: 700;
     font-size: 3vh;
+}
+
+.kycSubHead {
+    font-size: 2vh;
+    margin: 2vh 0;
+}
+
+.kycButton .btn {
+    background-color: #9D0909;
+    color: white;
+    border: none;
+    width: 40vw;
+    height: 4vh;
+    border-radius: 10px;
+}
+
+.profileMetric {
+    margin: 2vh;
+    text-align: center;
+}
+
+.profileMetricDiv {
+    background-color: white;
+    padding: 2%;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.profileMetricList {
+    background-color: white;
+    margin-top: 2vh;
+    border-radius: 10px;
+    padding: 2vh 0;
+}
+
+.metricList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 2vh 0;
+}
+
+
+.metricsLeftCol {
+    border: 1px solid #BC9E9E;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 70%;
+    height: 5vh;
+}
+
+.metricsRightCol {
+    border: 1px solid #BC9E9E;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 20%;
+    height: 5vh;
+    text-align: center;
+    align-items: center;
+}
+
+.meritIcon {
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+.meritIcon img {
+    height: 1.8rem;
+    display: flex;
+    margin: auto;
+}
+
+.metricsLeftCol {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.metricsRightCol p {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.meritName{
+    margin-left: 2vw;
 }
