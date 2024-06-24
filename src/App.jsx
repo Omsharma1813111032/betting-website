@@ -9,6 +9,8 @@ import Profile from "./pages/Profile/Profile";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from "react-toastify";
 import Terms from "./pages/TermsOfServices/Terms";
+import GameScr from "./pages/GameScreen/GameScr";
+import GameScr2 from "./pages/GameScreen2/GameScr2";
 
 
 
@@ -39,6 +41,8 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/gamescreen" element={<GameScr />} />
+              <Route path="/game" element={<GameScr2 />} />
               
             </Routes>
             <ToastContainer autoClose={1500} />

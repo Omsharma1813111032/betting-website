@@ -6,6 +6,8 @@
     display: flex;
     flex-flow: row wrap;
     padding: 2% 2% 0% 2%;
+    align-items: center;
+    min-height: 5vh;
 }
 
 .backHeaderTitle{
@@ -20,6 +22,15 @@
     width: 60vw;
 }
 
+.headLogo{
+    position: absolute;
+    left: 10%;
+}
+
 .backHeaderWallet{
     width: 15vw;
+    position: absolute;
+    right: 10%;
 }
+
+

@@ -1,0 +1,33 @@
+.gameScreenImage img{ 
+    width: 100vw;
+    height: 40vh;
+}
+
+.gameScreenMainDiv{
+    margin-bottom: 20%;
+}
+
+.gameScrHead{
+    text-align: center;
+    font-weight: 700;
+    font-size: 8vw;
+}
+
+.gameScreenList{
+    /* margin-top: 5%; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.gameScreenGame{
+    margin-top: 10%;
+}
+
+.gameScreenGameTitle{
+
+    font-size: 4vw;
+    font-weight: 700;
+}
